@@ -7,7 +7,7 @@ Of course,one could add their own license notice,Which OVERWRITES the repo wide 
 However,the target overwrite license must be less restrictive in distribution than Apache v2.<BSD,MIT,etc...>
 
 Basic Q&A.
-Q:What is the absolute reference?
+Q:What is the almost absolute reference?
 A:Reference Manual for lua.https://www.lua.org/manual/
 As said on webpage"The reference manual is the official definition of the Lua language."
 With generally specific version in inner path.EG,https://www.lua.org/manual/5.4/
@@ -19,7 +19,7 @@ If implementation better,request edit manual.Else,ignore the branch.As I believe
 
 Q:Add more external stuff dependencies,to test automate make colorful gui.
 A:NONONO.If it is not a included target in reference manual.NO.That's it.No random luaspec rock,json,fast highly optimized buffer from 3rd party package,NO.Keep it simple and clean.
-Remember the target,we want to the the implementations only.The Language itself.
+Remember the target,we want to test the implementations only.The Language itself.
 
 Similar Implementation testing repo,(discontinued&have some external dependencies)
 https://github.com/mirven/luaspec
