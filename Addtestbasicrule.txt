@@ -1,0 +1,56 @@
+<HARD RULE>
+Rule1,no user input needed to continue the test.(EG,no thread blocking code)
+Rule2,No over-reach,but allow less-reach.Simple reason.
+less reach=not documented,not tested,not verified,just continue daily life.
+Over reach=wrong document,wrong test,false alarm,then question life choice.
+(Just simply,give the last KNOWN version that passes,no need guess about past behaviour.)
+Rule3,Even fails,obey rule one do not freeze for user interaction.Only allows creations of logs in any form.(Console,write text file,etc.)
+
+<Soft rule>
+Rule1,minimal reproducible.It is good to test all behaviour.But a thousand line code for a small test is quite questionable.
+Rule2,Max one file per behaviour test.Unless it is a file dependent test please,please make sure it is Tested within a file.
+
+License,
+Apache License ver 2,
+no need to keep fighting over license.Friendly Company can take whatever and use and contribute near to hassle free.
+Some code that are contributed may not have the extra bloated license notice.
+But do note that a simple comment such as "Lua_RI_testsuite" is enough to state that is is using this repo wide license.
+Of course,one could add their own license notice,Which OVERWRITES the repo wide default license.
+However,the target overwrite license must be less restrictive in distribution than Apache v2.<BSD,MIT,etc...>
+
+EG case for reference,
+SUCCESS CASE.
+D:\Coding\lua\standardenv\bin>dir
+
+ Directory of D:\Coding\lua\standardenv\bin
+
+10/01/2021  23:09    <DIR>          .
+10/01/2021  23:09    <DIR>          ..
+02/09/2020  22:03            45,568 lua.exe
+02/09/2020  22:03           258,308 lua54.dll
+02/09/2020  22:03           541,894 luac.exe
+27/12/2020  13:27               331 Test1.lua
+               4 File(s)        846,101 bytes
+               2 Dir(s)  10,937,966,080 bytes free
+
+D:\Coding\lua\standardenv\bin>lua Test1.lua
+
+D:\Coding\lua\standardenv\bin>
+_______________
+D:\Coding\lua\LuaJitenvcollec\LuaJIT-2.1_forkedoutenv_min\src>dir
+FAIL CASE.
+
+ Directory of D:\Coding\lua\LuaJitenvcollec\LuaJIT-2.1_forkedoutenv_min\src
+
+10/01/2021  23:14    <DIR>          .
+10/01/2021  23:14    <DIR>          ..
+26/10/2020  00:22           496,469 cyglua51.dll
+26/10/2020  00:24    <DIR>          jit
+30/05/2017  06:00           938,157 libgcc_s_dw2-1.dll
+26/10/2020  00:22            32,135 luajit.exe
+27/12/2020  13:27               331 Test1.lua
+               4 File(s)      1,467,092 bytes
+               3 Dir(s)  10,937,957,888 bytes free
+
+D:\Coding\lua\LuaJitenvcollec\LuaJIT-2.1_forkedoutenv_min\src> luajit Test1.lua
+luajit: Test1.lua:16: unexpected symbol near '<'
